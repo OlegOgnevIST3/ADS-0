@@ -1,12 +1,14 @@
 
 int gcd(int a, int b) {
-  while (a > 0 && b > 0) {
-      if (a > b) {
-        a %= b;
-      }
-      else {
-        b %= a;
-      }
+    // поместить сюда текст реализации алгоритма (на С++)
+  if (a % b == 0) {
+    return b;
   }
-  return a + b;
+  if (b % a == 0) {
+    return a;
+  }
+  if (a > b) {
+    return gcd(a%b, b); 
+  }
+  return gcd(a, b%a);
 }
