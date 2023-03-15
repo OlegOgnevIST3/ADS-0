@@ -7,5 +7,5 @@ int gcd(int a, int b) {
   else
     b = b % a;
   }
-  return a+b;    
+  return a + b;    
 }
